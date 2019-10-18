@@ -43,7 +43,6 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
           var weight = byCodes('29463-7');
-          alert(weight);
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
