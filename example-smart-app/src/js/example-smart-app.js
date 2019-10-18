@@ -42,12 +42,14 @@
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
+          var weight = byCodes('29463-7');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+          p.weight = weight;
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
@@ -79,6 +81,7 @@
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
+      weight: {value: ''},
       height: {value: ''},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
@@ -120,6 +123,7 @@
     $('#loading').hide();
     $('#fname').html(p.fname);
     $('#lname').html(p.lname);
+    $('#weight').html(p.weight);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
     $('#height').html(p.height);
